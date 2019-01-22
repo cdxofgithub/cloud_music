@@ -46,7 +46,7 @@ export default {};
       overflow: hidden;
       img {
         width: 0.5rem;
-        height: 0.5rem;
+        height: auto;
       }
     }
     span {

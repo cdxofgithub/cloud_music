@@ -1,6 +1,7 @@
 @import "./variable.scss";
 
-body, html {
+body,
+html {
   line-height: 1;
   font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback';
   user-select: none;
@@ -8,6 +9,7 @@ body, html {
   background: $color-background;
   color: $color-text;
 }
+
 img {
   width: 100%;
   height: 100%;
@@ -16,32 +18,55 @@ img {
 .rm {
   position: relative;
 }
+
 .em {
   position: absolute;
 }
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .f_l_c {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
+
 .f_b_c {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .f_a_c {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+
 .f_c_c {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.f_c_b_c {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start
 }
 .f_c_c_c {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.f_c_t_l {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }

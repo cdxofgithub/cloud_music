@@ -22,7 +22,7 @@
             class="item rm"
             v-for="(item, index) in personalized.slice(0, 6)"
             :key="index"
-            @click="toPlayList(item.id)"
+            @click="toPlayList(item.id, item.copywriter)"
           >
             <div class="play-count em f_l_c">
               <img src="../assets/images/views/listen-icon.png" alt>
@@ -83,10 +83,10 @@ export default {
       });
     },
     //进入歌单详情列表
-    toPlayList(id) {
+    toPlayList(id, copywriter) {
       this.$router.push({
         path: "/playList",
-        query: { id: id }
+        query: { id: id, copywriter: copywriter }
       });
     }
   }
@@ -143,6 +143,7 @@ export default {
       margin: 0.3rem 0;
       .item {
         width: 2.36rem;
+        height: 3.48rem;
         img {
           width: 2.36rem;
           height: 2.36rem;
@@ -151,7 +152,7 @@ export default {
         }
         .desc {
           font-size: $font-size-small;
-          padding: 0.1rem 0.04rem 0.3rem;
+          padding: 0.1rem 0.04rem 0rem;
           line-height: 1.5;
         }
         .play-count {
